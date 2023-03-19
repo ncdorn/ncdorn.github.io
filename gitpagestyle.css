@@ -1,12 +1,24 @@
+:root {
+    CardinalRed:#8C1515;
+}
+
 body {
-	background-color: PowderBlue;
+	background-color: LightCoral;
 	font-family: 'Source Sans Pro', sans-serif;
 }
 
 h1 {
+	color: Navy;
+}
+
+h2 {
 	color: DarkBlue;
 }
 
+h3 {
+	color: #8C1515;
+}
+
 p {
-	color: Navy;
+	color: SeaShell;
 }
