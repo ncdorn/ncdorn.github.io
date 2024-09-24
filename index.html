@@ -17,6 +17,7 @@
             padding: 20px;
             background-color: white;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: relative;
         }
         h1 {
             color: red;
@@ -27,6 +28,11 @@
             color: darkgrey;
             font-size: 1.5em;
             margin-top: 0;
+        }
+        h3 {
+            color: black;
+            font-size: 1.3em;
+            margin-top: 10px;
         }
         p {
             color: black;
@@ -45,27 +51,53 @@
         .section {
             margin-top: 30px;
         }
+        .logo {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+        .logo img {
+            width: 100px;
+        }
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
+        <div class="logo">
+            <img src="stanford_logo.png" alt="Stanford University Logo">
+        </div>
+        
         <h1>Nicholas Dorn</h1>
         <h2>3rd Year PhD Student</h2>
         <p>Cardiovascular Biomechanics Computation Lab<br>
         Chemical Engineering Department, Stanford University</p>
         
-        <a href="Nick_Dorn_CV.pdf" class="button">My CV</a>
+        <a href="CV_Link_Here" class="button">Access CV</a>
         
         <div class="section">
             <h2>Ongoing Research</h2>
-            <p>I am passionate about leveraging novel reduced-order modeling techniques and fluid mechanics to improve cardiovascular surgery.</p>
+
+            <div class="research-project">
+                <h3>1. Simulating Microvascular Adaptation</h3>
+                <p>This project involves developing computational models to simulate how microvascular networks adapt to physiological and pathological conditions. The goal is to understand the regulatory mechanisms involved in microvascular growth and remodeling in response to stimuli such as blood flow and pressure.</p>
+            </div>
+
+            <div class="research-project">
+                <h3>2. Validation of Microvascular Adaptation Model in ToF and Alagille Patients</h3>
+                <p>In collaboration with clinical teams, this project focuses on validating the developed microvascular adaptation model in patients with Tetralogy of Fallot (ToF) and Alagille syndrome. The study involves comparing simulation results with patient-specific data to assess the accuracy and predictive capacity of the model.</p>
+            </div>
+
+            <div class="research-project">
+                <h3>3. Building a Multi-Fidelity Closed Loop Model of the Pulmonary Arteries</h3>
+                <p>This research aims to create a multi-fidelity closed loop model of the pulmonary arteries that integrates both high-fidelity local models and lower-fidelity global models. The model will be used to study blood flow dynamics and arterial pressure regulation in different pathological scenarios.</p>
+            </div>
         </div>
 
         <div class="section">
             <h2>Publications</h2>
-            <p>Find Nicholas Dorn’s research publications and contributions to the field:</p>
-            <a href="https://scholar.google.com/citations?user=zKNZbV8AAAAJ&hl=en&oi=ao" class="button">View Publications</a>
+            <p>Find Nicholas Dorn’s research publications and contributions on Google Scholar:</p>
+            <a href="https://scholar.google.com/citations?user=YOUR_GOOGLE_SCHOLAR_ID" class="button">View Google Scholar Profile</a>
         </div>
     </div>
 </body>
