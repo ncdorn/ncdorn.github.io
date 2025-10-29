@@ -1,0 +1,20 @@
+[
+  {
+    "url": "/pages/publications.html",
+    "title": "Publications",
+    "tags": ["publications","papers","research"],
+    "text": "Data-driven list of publications with filters by year and tag."
+  },
+  {
+    "url": "/pages/projects.html",
+    "title": "Projects & Software",
+    "tags": ["projects","software","repos"],
+    "text": "Cards for repositories and apps with tags."
+  },
+  {
+    "url": "/pages/talks.html",
+    "title": "Talks & Posters",
+    "tags": ["talks","posters","presentations"],
+    "text": "Chronological list with links to slides and videos."
+  }
+]

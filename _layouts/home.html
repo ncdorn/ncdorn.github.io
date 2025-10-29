@@ -1,0 +1,71 @@
+<!-- _layouts/home.html -->
+---
+layout: base
+---
+
+<section class="hero" aria-label="Intro">
+  <div class="hero-visual">
+    <svg class="hero-svg" role="img" aria-label="Animated pulmonary tree">
+      <title>Pulsatile pulmonary tree</title>
+      <use href="{{ '/assets/svg/pulmonary-hero.svg#tree' | relative_url }}"></use>
+    </svg>
+    <div class="hero-bg" aria-hidden="true">
+      <svg>
+        <use href="{{ '/assets/svg/pulmonary-bg.svg#cap-mesh' | relative_url }}"></use>
+      </svg>
+    </div>
+  </div>
+  <div class="hero-copy container">
+    <h1 class="display">Computational Cardiovascular Biomechanics</h1>
+    <p class="lead">Hi, I’m <strong>{{ site.nick.preferred_name }}</strong>. I model <em>pulmonary circulation</em> and <em>microvascular adaptation</em> to improve patient-specific hemodynamics.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="{{ '/pages/projects.html' | relative_url }}">Projects</a>
+      <a class="btn btn-subtle" href="{{ '/pages/publications.html' | relative_url }}">Publications</a>
+      <a class="btn btn-link" href="{{ site.nick.social.github }}" target="_blank" rel="noopener">GitHub ↗</a>
+    </div>
+  </div>
+</section>
+
+<section class="container grid gap-xl">
+  <div>
+    <h2 class="h3 with-icon"><svg class="icon"><use href="{{ '/assets/svg/icons.svg#star' | relative_url }}"/></svg> Featured</h2>
+    <div class="cards">
+      {% assign featured = site.data.projects | where: "featured", true | sort: "order" %}
+      {% for p in featured limit: 6 %}
+        {% include card-project.html project=p %}
+      {% endfor %}
+    </div>
+  </div>
+
+  <div>
+    <h2 class="h3 with-icon"><svg class="icon"><use href="{{ '/assets/svg/icons.svg#news' | relative_url }}"/></svg> News</h2>
+    <ul class="news-list">
+      {% for post in site.posts limit:3 %}
+      <li>
+        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        <time datetime="{{ post.date | date_to_xmlschema }}">· {{ post.date | date: "%b %-d, %Y" }}</time>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Person",
+  "name":"{{ site.nick.name }}",
+  "givenName":"Nick",
+  "jobTitle":"{{ site.nick.title }}",
+  "affiliation":[{% for a in site.nick.affiliations %}{"@type":"Organization","name":"{{ a }}"}{% unless forloop.last %},{% endunless %}{% endfor %}],
+  "url":"{{ site.url }}{{ site.baseurl }}",
+  "email":"mailto:{{ site.nick.email_public }}",
+  "sameAs":[
+    "{{ site.nick.social.github }}",
+    "{{ site.nick.social.scholar }}",
+    "{{ site.nick.social.linkedin }}",
+    "{{ site.nick.social.x }}",
+    "{{ site.nick.social.bsky }}"
+  ]
+}
+</script>

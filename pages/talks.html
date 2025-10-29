@@ -1,0 +1,12 @@
+<!-- pages/talks.html -->
+---
+title: "Talks & Posters"
+permalink: /pages/talks.html
+---
+
+<section class="stack">
+  {% assign talks = site.data.talks | sort: "date" | reverse %}
+  {% for t in talks %}
+    {% include card-talk.html talk=t %}
+  {% endfor %}
+</section>

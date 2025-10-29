@@ -1,0 +1,16 @@
+# _data/talks.yml
+- title: "Structured Trees for Pulmonary Boundary Conditions"
+  event: "CMBBE 2025 — Barcelona"
+  date: "2025-09-10"
+  location: "Barcelona, Spain"
+  slides: "https://example.org/talks/cmbbe-2025-slides.pdf"
+  video: ""
+  abstract: "Demonstration of waveform improvements and tuning strategies."
+
+- title: "Microvascular Adaptation: From Theory to Prediction"
+  event: "Stanford Biomechanics Seminar"
+  date: "2025-05-07"
+  location: "Stanford, CA"
+  slides: ""
+  video: ""
+  abstract: "Relating shear/transmural stress to structural remodeling."

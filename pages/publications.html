@@ -1,0 +1,14 @@
+<!-- pages/publications.html -->
+---
+title: "Publications"
+permalink: /pages/publications.html
+---
+
+{% include filters.html items=site.data.publications %}
+
+<section id="pub-list" class="cards">
+  {% assign pubs = site.data.publications | sort: "year" | reverse %}
+  {% for pub in pubs %}
+    {% include card-publication.html pub=pub %}
+  {% endfor %}
+</section>

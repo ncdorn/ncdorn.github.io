@@ -1,0 +1,10 @@
+<!-- _includes/card-talk.html -->
+<article class="card talk">
+  <h3 class="h5 mt-0">{{ include.talk.title }}</h3>
+  <p class="venue">{{ include.talk.event }} · <time datetime="{{ include.talk.date }}">{{ include.talk.date }}</time> — {{ include.talk.location }}</p>
+  <p class="links">
+    {% if include.talk.slides %}<a href="{{ include.talk.slides }}" target="_blank" rel="noopener">Slides</a>{% endif %}
+    {% if include.talk.video %} · <a href="{{ include.talk.video }}" target="_blank" rel="noopener">Video</a>{% endif %}
+  </p>
+  {% if include.talk.abstract %}<p>{{ include.talk.abstract }}</p>{% endif %}
+</article>

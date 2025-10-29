@@ -1,0 +1,18 @@
+:root[data-contrast="high"]{
+  --bg-0:#fff;
+  --bg-1:#fff;
+  --bg-2:#fff;
+  --bg-3:#f3f3f3;
+  --text-0:#000;
+  --text-1:#111;
+  --accent-1:#bf0000;
+  --accent-2:#0020bf;
+}
+
+:root[data-theme="dark"]{
+  color-scheme: dark;
+}
+
+@media (prefers-reduced-motion: reduce){
+  *{animation:none !important;transition:none !important;scroll-behavior:auto !important}
+}

@@ -1,0 +1,7 @@
+@media print{
+  body{background:#fff;color:#000}
+  a{color:#000;text-decoration:underline}
+  header,footer,.site-footer,.nav,.hero,.toggles{display:none !important}
+  .container{width:auto;margin:0}
+  .resume,.cv{font-size:12pt}
+}

@@ -1,0 +1,16 @@
+<!-- _includes/card-project.html -->
+<article class="card project" data-tags="{{ include.project.tags | join: ' ' | downcase }}">
+  <header>
+    <h3 class="h5 mt-0">{{ include.project.name }}</h3>
+    {% if include.project.featured %}<span class="badge">Featured</span>{% endif %}
+  </header>
+  <p>{{ include.project.summary }}</p>
+  <p class="meta">
+    {% if include.project.tech %}<span>Tech: {{ include.project.tech | join: ", " }}</span>{% endif %}
+  </p>
+  <p class="links">
+    {% if include.project.repo %}<a href="{{ include.project.repo }}" target="_blank" rel="noopener">Repo ↗</a>{% endif %}
+    {% if include.project.docs %} · <a href="{{ include.project.docs }}" target="_blank" rel="noopener">Docs ↗</a>{% endif %}
+    {% if include.project.demo %} · <a href="{{ include.project.demo }}" target="_blank" rel="noopener">Demo ↗</a>{% endif %}
+  </p>
+</article>

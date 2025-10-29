@@ -1,0 +1,15 @@
+<!-- assets/svg/pulmonary-bg.svg -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600">
+  <defs>
+    <filter id="blur"><feGaussianBlur stdDeviation="20"/></filter>
+  </defs>
+  <g id="cap-mesh" filter="url(#blur)" opacity="0.2" stroke="oklch(60% 0.12 320)" fill="none">
+    <path d="M30 80 C120 40, 220 120, 310 80" />
+    <path d="M310 80 C400 40, 500 120, 590 80" />
+    <path d="M590 80 C680 40, 780 120, 870 80" />
+    <path d="M30 180 C120 140, 220 220, 310 180" />
+    <path d="M310 180 C400 140, 500 220, 590 180" />
+    <path d="M590 180 C680 140, 780 220, 870 180" />
+    <!-- lightweight mesh -->
+  </g>
+</svg>

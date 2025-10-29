@@ -1,0 +1,36 @@
+# _data/publications.yml
+- title: "Structured-tree microvascular boundary conditions improve pulmonary waveform fidelity"
+  authors: "N. Dorn, A. Researcher, J. Mentor"
+  venue: "Journal of Cardiovascular Modeling"
+  year: 2025
+  doi: "10.1000/j.jcm.2025.00123"
+  pdf: "https://example.org/papers/structured-tree.pdf"
+  code: "https://github.com/your-github/svZeroDTrees"
+  slides: ""
+  poster: ""
+  abstract: "We quantify hemodynamic improvements using structured-tree outflow boundary conditions with adaptive tuning."
+  tags: ["pulmonary", "structured-tree", "boundary-conditions"]
+
+- title: "Coupling 0D/1D LPN models to patient-specific 3D pulmonary CFD"
+  authors: "N. Dorn, V. Collaborator, J. Advisor"
+  venue: "CMBBE 2025"
+  year: 2025
+  doi: ""
+  pdf: ""
+  code: "https://github.com/your-github/svZeroDSolver"
+  slides: "https://example.org/talks/cmbbe-2025-slides.pdf"
+  poster: "https://example.org/posters/cmbbe-2025-poster.pdf"
+  abstract: "A modular multi-fidelity framework coupling svZeroDSolver to svMultiPhysics for realistic boundary conditions."
+  tags: ["CFD", "LPN", "coupling"]
+
+- title: "Microvascular adaptation under pulsatile shear and transmural stress"
+  authors: "N. Dorn, A. Scientist"
+  venue: "ArXiv"
+  year: 2024
+  doi: ""
+  pdf: "https://arxiv.org/pdf/0000.00000.pdf"
+  code: ""
+  slides: ""
+  poster: ""
+  abstract: "A minimal model of radius/thickness adaptation driven by hemodynamic signals."
+  tags: ["adaptation", "theory", "pulmonary"]
