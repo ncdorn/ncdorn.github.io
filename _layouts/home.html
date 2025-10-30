@@ -1,11 +1,11 @@
-<!-- _layouts/home.html -->
 ---
 layout: base
 ---
+<!-- _layouts/home.html -->
 
 <section class="hero" aria-label="Intro">
   <div class="hero-visual">
-    <svg class="hero-svg" role="img" aria-label="Animated pulmonary tree">
+    <svg class="hero-svg" role="img" aria-label="Animated pulmonary tree" viewBox="0 0 900 600" preserveAspectRatio="xMidYMid meet">
       <title>Pulsatile pulmonary tree</title>
       <use href="{{ '/assets/svg/pulmonary-hero.svg#tree' | relative_url }}"></use>
     </svg>
@@ -15,13 +15,37 @@ layout: base
       </svg>
     </div>
   </div>
-  <div class="hero-copy container">
-    <h1 class="display">Computational Cardiovascular Biomechanics</h1>
-    <p class="lead">Hi, I’m <strong>{{ site.nick.preferred_name }}</strong>. I model <em>pulmonary circulation</em> and <em>microvascular adaptation</em> to improve patient-specific hemodynamics.</p>
-    <div class="cta-row">
-      <a class="btn btn-primary" href="{{ '/pages/projects.html' | relative_url }}">Projects</a>
-      <a class="btn btn-subtle" href="{{ '/pages/publications.html' | relative_url }}">Publications</a>
-      <a class="btn btn-link" href="{{ site.nick.social.github }}" target="_blank" rel="noopener">GitHub ↗</a>
+
+  <!-- New grid row: text + headshot -->
+  <div class="container hero-row">
+    <!-- Headshot: non-overbearing, adaptive size -->
+    <figure class="headshot" aria-label="Photo of {{ site.nick.preferred_name }} Dorn">
+      <picture>
+        <source
+          srcset="
+            {{ '/assets/img/headshot_gradient_1200.png' | relative_url }} 1200w,
+            {{ '/assets/img/headshot_gradient_640.png'  | relative_url }} 640w,
+            {{ '/assets/img/headshot_gradient_512.png'  | relative_url }} 512w,
+            {{ '/assets/img/headshot_gradient_320.png'  | relative_url }} 320w"
+          type="image/png"
+          sizes="(max-width: 900px) 40vw, 180px" />
+        <img
+          src="{{ '/assets/img/headshot_gradient_640.png' | relative_url }}"
+          width="640" height="640"
+          alt="Headshot of {{ site.nick.preferred_name }} Dorn"
+          loading="eager" decoding="async" fetchpriority="high"
+          style="aspect-ratio:1/1" />
+      </picture>
+    </figure>
+
+    <div class="hero-text">
+      <h1 class="display">Hi, I’m <strong>{{ site.nick.preferred_name }}</strong>.</h1>
+      <p class="lead">I model <em>pulmonary circulation</em> and <em>microvascular adaptation</em> to improve patient-specific hemodynamics.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="{{ '/pages/projects.html' | relative_url }}">Projects</a>
+        <a class="btn btn-subtle" href="{{ '/pages/publications.html' | relative_url }}">Publications</a>
+        <a class="btn btn-link" href="{{ site.nick.social.github }}" target="_blank" rel="noopener">GitHub ↗</a>
+      </div>
     </div>
   </div>
 </section>
