@@ -1,0 +1,23 @@
+<header class="site-header">
+  <nav class="nav container" aria-label="Primary">
+    <a class="brand" href="{{ '/' | relative_url }}">
+      <svg class="brand-mark" aria-hidden="true"><use href="{{ '/assets/svg/icons.svg#lung' | relative_url }}"></use></svg>
+      <span class="brand-text">Nick Dorn</span>
+    </a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="nav-list"><span class="sr-only">Menu</span></button>
+    <ul id="nav-list" class="nav-list">
+      <li><a class="nav-link{% if page.url == '/pages/research.html' %} is-active{% endif %}" {% if page.url == '/pages/research.html' %}aria-current="page"{% endif %} href="{{ '/pages/research.html' | relative_url }}">Research</a></li>
+      <li><a class="nav-link{% if page.url == '/pages/projects.html' %} is-active{% endif %}" {% if page.url == '/pages/projects.html' %}aria-current="page"{% endif %} href="{{ '/pages/projects.html' | relative_url }}">Projects</a></li>
+      <li><a class="nav-link{% if page.url == '/pages/publications.html' %} is-active{% endif %}" {% if page.url == '/pages/publications.html' %}aria-current="page"{% endif %} href="{{ '/pages/publications.html' | relative_url }}">Publications</a></li>
+      <li><a class="nav-link{% if page.url == '/pages/talks.html' %} is-active{% endif %}" {% if page.url == '/pages/talks.html' %}aria-current="page"{% endif %} href="{{ '/pages/talks.html' | relative_url }}">Talks & Posters</a></li>
+      <li><a class="nav-link{% if page.url == '/pages/resume.html' %} is-active{% endif %}" {% if page.url == '/pages/resume.html' %}aria-current="page"{% endif %} href="{{ '/pages/resume.html' | relative_url }}">Resume</a></li>
+      <li><a class="nav-link{% if page.url == '/pages/cv.html' %} is-active{% endif %}" {% if page.url == '/pages/cv.html' %}aria-current="page"{% endif %} href="{{ '/pages/cv.html' | relative_url }}">CV</a></li>
+      <li class="nav-divider" aria-hidden="true"></li>
+      <li class="toggles">
+        <button id="toggle-theme" class="btn-ghost" aria-pressed="false" title="Toggle dark mode">🌓</button>
+        <button id="toggle-contrast" class="btn-ghost" aria-pressed="false" title="Toggle high contrast">🔳</button>
+        <button id="toggle-motion" class="btn-ghost" aria-pressed="false" title="Toggle motion">⏯</button>
+      </li>
+    </ul>
+  </nav>
+</header>

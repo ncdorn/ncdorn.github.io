@@ -1,0 +1,11 @@
+{%- comment -%}
+Optional analytics; disabled by default. Uncomment and set your domain.
+{%- endcomment -%}
+{%- comment -%}
+<script defer data-domain="yourdomain.example.com" src="https://plausible.io/js/script.js"></script>
+<link rel="preload" as="image"
+  imagesrcset="{{ '/assets/img/headshot_gradient_640.png'  | relative_url }} 640w,
+               {{ '/assets/img/headshot_gradient_512.png'  | relative_url }} 512w,
+               {{ '/assets/img/headshot_gradient_320.png'  | relative_url }} 320w"
+  imagesizes="(max-width: 900px) 40vw, 180px">
+{%- endcomment -%}

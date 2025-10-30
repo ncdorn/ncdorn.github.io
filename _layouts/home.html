@@ -1,0 +1,94 @@
+---
+layout: base
+---
+<!-- _layouts/home.html -->
+
+<section class="hero" aria-label="Intro">
+  <div class="hero-visual">
+    <img class="hero-svg" src="{{ '/assets/img/cassian-pas-full.png' | relative_url }}" alt="" role="presentation">
+    <div class="hero-bg" aria-hidden="true">
+      <svg>
+        <use href="{{ '/assets/svg/pulmonary-bg.svg#cap-mesh' | relative_url }}"></use>
+      </svg>
+    </div>
+  </div>
+
+  <!-- New grid row: text + headshot -->
+  <div class="container hero-row">
+    <!-- Headshot: non-overbearing, adaptive size -->
+    <figure class="headshot" aria-label="Photo of {{ site.nick.preferred_name }} Dorn">
+      <picture>
+        <source
+          srcset="
+            {{ '/assets/img/headshot_gradient_1200.png' | relative_url }} 1200w,
+            {{ '/assets/img/headshot_gradient_640.png'  | relative_url }} 640w,
+            {{ '/assets/img/headshot_gradient_512.png'  | relative_url }} 512w,
+            {{ '/assets/img/headshot_gradient_320.png'  | relative_url }} 320w"
+          type="image/png"
+          sizes="(max-width: 900px) 40vw, 180px" />
+        <img
+          src="{{ '/assets/img/headshot_gradient_640.png' | relative_url }}"
+          width="640" height="640"
+          alt="Headshot of {{ site.nick.preferred_name }} Dorn"
+          loading="eager" decoding="async" fetchpriority="high"
+          style="aspect-ratio:1/1" />
+      </picture>
+    </figure>
+
+    <div class="hero-text glass-panel hero-card">
+      <h1 class="display">Hi, I’m <strong>{{ site.nick.preferred_name }}</strong>.</h1>
+      <p class="lead">I model <em>pulmonary hemodynamics</em> and <em>microvascular adaptation</em> to improve surgical planning for children with congenital heart defects. 
+                                  I am currently a PhD candidate in the Cardiovascular Biomechanics Computation Lab at Stanford University. 
+      <div class="cta-row">
+        <a class="btn btn-primary" href="{{ site.nick.social.github }}" target="_blank" rel="noopener">GitHub ↗</a>
+        <a class="btn btn-subtle" href="{{ site.nick.social.scholar }}" target="_blank" rel="noopener">Google Scholar ↗</a>
+        <a class="btn btn-link" href="{{ site.nick.social.linkedin }}" target="_blank" rel="noopener">LinkedIn ↗</a>
+        <a class="btn btn-link" href="mailto:ndorn@stanford.edu">Email ↗</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="container grid gap-xl">
+  <div class="glass-panel glass-section">
+    <h2 class="h3 with-icon"><svg class="icon"><use href="{{ '/assets/svg/icons.svg#star' | relative_url }}"/></svg> Featured</h2>
+    <div class="cards">
+      {% assign featured = site.data.projects | where: "featured", true | sort: "order" %}
+      {% for p in featured limit: 6 %}
+        {% include card-project.html project=p %}
+      {% endfor %}
+    </div>
+  </div>
+
+  <div class="glass-panel glass-section">
+    <h2 class="h3 with-icon"><svg class="icon"><use href="{{ '/assets/svg/icons.svg#news' | relative_url }}"/></svg> News</h2>
+    <ul class="news-list">
+      {% for post in site.posts limit:3 %}
+      <li>
+        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        <time datetime="{{ post.date | date_to_xmlschema }}">· {{ post.date | date: "%b %-d, %Y" }}</time>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Person",
+  "name":"{{ site.nick.name }}",
+  "givenName":"Nick",
+  "jobTitle":"{{ site.nick.title }}",
+  "affiliation":[{% for a in site.nick.affiliations %}{"@type":"Organization","name":"{{ a }}"}{% unless forloop.last %},{% endunless %}{% endfor %}],
+  "url":"{{ site.url }}{{ site.baseurl }}",
+  "email":"mailto:{{ site.nick.email_public }}",
+  "sameAs":[
+    "{{ site.nick.social.github }}",
+    "{{ site.nick.social.scholar }}",
+    "{{ site.nick.social.linkedin }}",
+    "{{ site.nick.social.x }}",
+    "{{ site.nick.social.bsky }}"
+  ]
+}
+</script>

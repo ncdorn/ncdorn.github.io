@@ -1,0 +1,26 @@
+<div class="filters" role="group" aria-label="Filters">
+  <div class="filter-row">
+    <span class="filter-label">Year:</span>
+    <div class="filter-buttons" data-filter-type="year">
+      <button class="filter-btn" data-filter-value="all" aria-pressed="true">All</button>
+      {% assign years = include.items | map: 'year' | uniq | sort | reverse %}
+      {% for y in years %}
+      <button class="filter-btn" data-filter-value="{{ y }}">{{ y }}</button>
+      {% endfor %}
+    </div>
+  </div>
+  {% assign all_tags = "" | split: "" %}
+  {% for item in include.items %}
+    {% if item.tags %}{% assign all_tags = all_tags | concat: item.tags %}{% endif %}
+  {% endfor %}
+  {% assign tags = all_tags | uniq | sort %}
+  <div class="filter-row">
+    <span class="filter-label">Tags:</span>
+    <div class="filter-buttons" data-filter-type="tags" data-multi="true">
+      <button class="filter-btn" data-filter-value="all" aria-pressed="true">All</button>
+      {% for t in tags %}
+      <button class="filter-btn" data-filter-value="{{ t | downcase }}">{{ t }}</button>
+      {% endfor %}
+    </div>
+  </div>
+</div>

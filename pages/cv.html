@@ -1,0 +1,27 @@
+---
+title: "Curriculum Vitae"
+permalink: /pages/cv.html
+---
+<!-- pages/cv.html -->
+
+<p><a class="btn btn-primary" href="{{ '/assets/docs/cv.pdf' | relative_url }}" download>Download PDF</a></p>
+
+<section class="cv">
+  <h2>Curriculum Vitae — Nick Dorn</h2>
+  <p>This is an HTML mirror for printing. Use the “Download PDF” for the full CV layout.</p>
+
+  <h3>Publications</h3>
+  <ol>
+    {% assign pubs = site.data.publications | sort: "year" | reverse %}
+    {% for pub in pubs %}
+    <li><strong>{{ pub.title }}</strong> — {{ pub.authors }}. <em>{{ pub.venue }}</em>, {{ pub.year }}.</li>
+    {% endfor %}
+  </ol>
+
+  <h3>Talks</h3>
+  <ul>
+    {% for t in site.data.talks %}
+    <li>{{ t.title }} — {{ t.event }}, {{ t.date }}, {{ t.location }}</li>
+    {% endfor %}
+  </ul>
+</section>

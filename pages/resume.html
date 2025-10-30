@@ -1,0 +1,126 @@
+---
+title: "Resume"
+permalink: /pages/resume.html
+---
+<!-- pages/resume.html -->
+
+<p><a class="btn btn-primary" href="{{ '/assets/docs/resume.pdf' | relative_url }}" download>Download PDF</a></p>
+
+<section class="resume glass-panel">
+  <header class="resume-header">
+    <div>
+      <h2>Nicholas C. Dorn</h2>
+      <p class="resume-tagline">Computational Modeling, CFD &amp; Medical Software Engineer</p>
+    </div>
+    <ul class="resume-contact list-plain">
+      <li>Stanford, CA</li>
+      <li><a href="mailto:ncdorn@stanford.edu">ncdorn@stanford.edu</a></li>
+      <li><a href="tel:+13106947446">(310) 694-7446</a></li>
+      <li><a href="{{ site.nick.social.github }}" target="_blank" rel="noopener">github.com/ncdorn</a></li>
+      <li><a href="https://ncdorn.github.io" target="_blank" rel="noopener">ncdorn.github.io</a></li>
+      <li><a href="{{ site.nick.social.linkedin }}" target="_blank" rel="noopener">linkedin.com/in/ndorn22</a></li>
+    </ul>
+  </header>
+
+  <div class="resume-section">
+    <h3>Summary</h3>
+    <p>Computational biomechanics PhD candidate applying physics-based cardiovascular simulation and reduced-order modeling to improve surgical planning and reduce clinical uncertainty. Deliver validated software used in multi-institution modeling studies and drive engineering adoption for translational research.</p>
+  </div>
+
+  <div class="resume-section">
+    <h3>Technical Skills</h3>
+    <ul class="resume-skills">
+      <li><strong>Languages &amp; Tools:</strong> Python, C++, Swift, Bash, Git</li>
+      <li><strong>Cardiovascular Modeling:</strong> CFD and 0D/1D cardiovascular modeling</li>
+      <li><strong>Platforms:</strong> SimVascular, Linux/HPC (Slurm), profiling, CI/CD (GitHub Actions), unit testing</li>
+      <li><strong>Data &amp; ML:</strong> DICOM/VTK/ITK pipelines, NumPy/Pandas, scikit-learn, PyTorch</li>
+      <li><strong>Methods:</strong> Optimization methods; numerical V&amp;V practices for medical software</li>
+    </ul>
+  </div>
+
+  <div class="resume-section">
+    <h3>Experience</h3>
+
+    <article class="resume-item">
+      <header>
+        <h4>PhD Candidate, Cardiovascular Biomechanics Computation Lab</h4>
+        <div class="resume-meta">
+          <span>Stanford University</span>
+          <span>Apr 2023 – Present</span>
+        </div>
+      </header>
+      <ul>
+        <li>Created the first automated pipeline for adaptive pulmonary CFD boundary condition tuning in SimVascular, improving agreement with clinical pressure/flow data.</li>
+        <li>Built <em>svZeroDTrees</em>, enabling rapid microvascular boundary condition and impedance computation for 2 labs across 5+ studies.</li>
+        <li>Executed multi-patient HPC studies on Slurm with performance debugging to reduce runtime and improve stability.</li>
+        <li>Communicated modeling outcomes with clinicians to support adoption for patient-specific treatment planning.</li>
+      </ul>
+    </article>
+
+    <article class="resume-item">
+      <header>
+        <h4>Key Open-Source Contributions</h4>
+      </header>
+      <ul>
+        <li><strong>svZeroDTrees | Core Developer:</strong> Automated boundary condition generation and built an end-to-end pipeline from image segmentation to predicted post-surgical hemodynamics.</li>
+        <li><strong>svZeroDSolver | Core Contributor:</strong> Led 7+ merged issues/PRs improving CI robustness; mentored an undergraduate contributor; collaborate with 14+ developers across 3 institutions.</li>
+      </ul>
+    </article>
+
+    <article class="resume-item">
+      <header>
+        <h4>Undergraduate Researcher, Nanoscale Materials &amp; Cell Engineering Lab</h4>
+        <div class="resume-meta">
+          <span>UC San Diego</span>
+          <span>Sept 2019 – Jun 2022</span>
+        </div>
+      </header>
+      <ul>
+        <li>Led in&nbsp;vivo and in&nbsp;vitro studies of a novel nanoparticle platform for delivering short-chain fatty acids to treat arthritis.</li>
+        <li>Published a co-first-author paper (30+ citations) and presented findings in three conference talks.</li>
+      </ul>
+    </article>
+  </div>
+
+  <div class="resume-section">
+    <h3>Software Projects</h3>
+    <article class="resume-item">
+      <header>
+        <h4>PacerBrain | iOS Performance Strategy App</h4>
+        <div class="resume-meta">
+          <span>SwiftUI, Core Data</span>
+        </div>
+      </header>
+      <ul>
+        <li>Developed a pacing and fueling modeling app used for personal race planning and execution; demonstrated to 30+ peers with positive feedback.</li>
+      </ul>
+    </article>
+  </div>
+
+  <div class="resume-section">
+    <h3>Publications &amp; Talks (Select)</h3>
+    <ul class="resume-list">
+      <li>Menon, Dorn et&nbsp;al. <em>svZeroDSolver: A modular package for lumped-parameter cardiovascular simulations</em>. <strong>JOSS</strong>, 2025.</li>
+      <li>Dorn et&nbsp;al. <em>Modeling vascular adaptation for prediction of surgical outcomes in pulmonary stenosis repair</em>. In preparation.</li>
+      <li>Dorn et&nbsp;al. <em>Comparative CFD analysis in a sheep model of Fontan circulation</em>. Talk, CMBBE 2025, Barcelona.</li>
+      <li>McBride*, Dorn* et&nbsp;al. <strong>Advanced Science</strong>, 2023; <strong>Drug Deliv. Transl. Res.</strong>, 2022 (*co-first).</li>
+    </ul>
+  </div>
+
+  <div class="resume-section">
+    <h3>Education</h3>
+    <ul class="resume-list">
+      <li><strong>MS &amp; PhD, Chemical Engineering (Cardiovascular Biomechanics)</strong> — Stanford University (MS Jun 2025; PhD exp. 2027)</li>
+      <li><strong>BS, Chemical Engineering (Minor: Mathematics)</strong> — UC San Diego (GPA 3.82; Jun 2022)</li>
+    </ul>
+  </div>
+
+  <div class="resume-section">
+    <h3>Awards &amp; Leadership</h3>
+    <ul class="resume-list">
+      <li>NSF Graduate Research Fellow (2022–2025)</li>
+      <li>Vice President, Project Bluewater Racing — nonprofit cleaning up San Diego waterways and providing tuition-free science and sailing education to 100 students; improved website data capture and CRM integration (2023–present).</li>
+      <li>President, UCSD Sailing Team — led competition and operations for 40 athletes (2020–2022).</li>
+    </ul>
+  </div>
+</section>

@@ -1,0 +1,32 @@
+<article class="card publication"
+  data-tags="{{ include.pub.tags | join: ' ' | downcase }}"
+  data-year="{{ include.pub.year }}">
+  <h3 class="h5 mt-0">{{ include.pub.title }}</h3>
+  <p class="authors">{{ include.pub.authors }}</p>
+  <p class="venue">{{ include.pub.journal }} · <strong>{{ include.pub.year }}</strong></p>
+  <p class="links">
+    {% if include.pub.pdf %}<a href="{{ include.pub.pdf }}" target="_blank" rel="noopener">PDF</a>{% endif %}
+    {% if include.pub.doi %} · <a href="https://doi.org/{{ include.pub.doi }}" target="_blank" rel="noopener">DOI</a>{% endif %}
+    {% if include.pub.code %} · <a href="{{ include.pub.code }}" target="_blank" rel="noopener">Code</a>{% endif %}
+    {% if include.pub.slides %} · <a href="{{ include.pub.slides }}" target="_blank" rel="noopener">Slides</a>{% endif %}
+    {% if include.pub.poster %} · <a href="{{ include.pub.poster }}" target="_blank" rel="noopener">Poster</a>{% endif %}
+  </p>
+  {% if include.pub.abstract %}
+  <details>
+    <summary>Abstract</summary>
+    <p>{{ include.pub.abstract }}</p>
+  </details>
+  {% endif %}
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"ScholarlyArticle",
+    "name":"{{ include.pub.title | escape }}",
+    "author":"{{ include.pub.authors | escape }}",
+    "datePublished":"{{ include.pub.year }}",
+    "publisher":"{{ include.pub.journal | escape }}",
+    {% if include.pub.doi %}"identifier":"https://doi.org/{{ include.pub.doi }}",{% endif %}
+    "url":"{{ site.url }}{{ site.baseurl }}{{ page.url }}"
+  }
+  </script>
+</article>

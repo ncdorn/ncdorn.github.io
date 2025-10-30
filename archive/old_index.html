@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nicholas Dorn - Stanford PhD</title>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --stanford-red: #8C1515;
+      --palo-alto-green: #d6f5e1;
+      --cream: #f2f7f3;
+      --peach: #fff0e6;
+      --text-dark: #333;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Source Serif Pro', serif;
+      background-color: #f2f2f2;
+      color: var(--text-dark);
+    }
+
+    .header {
+      text-align: center;
+      padding: 40px 20px 20px;
+      background-color: white;
+    }
+
+    .header img {
+      width: 100%;
+      max-height: 300px;
+      object-fit: cover;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .header h1 {
+      color: var(--stanford-red);
+      font-size: 2.8em;
+      margin: 20px 0 10px;
+    }
+
+    .header h3 {
+      color: #444;
+      font-size: 1.2em;
+      margin: 5px 0;
+    }
+
+    .button {
+      background-color: var(--stanford-red);
+      color: white;
+      text-decoration: none;
+      padding: 12px 24px;
+      font-size: 1.1em;
+      border-radius: 6px;
+      display: inline-block;
+      margin-top: 15px;
+    }
+
+    .section {
+      max-width: 1000px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+
+    .section h2 {
+      font-size: 2em;
+      text-align: center;
+      margin-bottom: 40px;
+      color: var(--text-dark);
+    }
+
+    .card {
+      display: flex;
+      align-items: center;
+      background-color: var(--palo-alto-green);
+      border-radius: 20px;
+      margin-bottom: 40px;
+      padding: 20px;
+      flex-wrap: wrap;
+    }
+
+    .card:nth-child(2) {
+      background-color: var(--cream);
+    }
+
+    .card:nth-child(3) {
+      background-color: var(--peach);
+    }
+
+    .card img {
+      max-width: 280px;
+      width: 100%;
+      border-radius: 12px;
+      flex-shrink: 0;
+    }
+
+    .card-content {
+      flex: 1;
+      padding-left: 30px;
+      min-width: 260px;
+    }
+
+    .card-content h3 {
+      font-size: 1.5em;
+      margin-top: 0;
+      margin-bottom: 12px;
+    }
+
+    .card-content p {
+      font-size: 1.05em;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    .repo-section .button {
+      padding: 8px 16px;
+      font-size: 1em;
+    }
+
+    @media (max-width: 768px) {
+      .card {
+        flex-direction: column;
+        padding: 20px;
+      }
+
+      .card-content {
+        padding-left: 0;
+        padding-top: 20px;
+      }
+
+      .card img {
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+    <div class="header">
+        <img src="clark-center.jpg" alt="Stanford Campus Image" />
+        <p style="font-size: 0.9em; color: #555; font-style: italic; margin-top: 8px; text-align: left; max-width: 1000px; margin-left: auto; margin-right: auto;">James H. Clark Center, Stanford University</p>
+        <h1>Nicholas Dorn</h1>
+        <h3>3rd Year PhD Student</h3>
+        <h3>Cardiovascular Biomechanics Computation Lab</h3>
+        <h3>Chemical Engineering Department, Stanford University</h3>
+        <a href="Nick_Dorn_CV.pdf" class="button">Curriculum Vitae</a>
+        <a href="https://github.com/ncdorn" class="button">GitHub Repositories</a>
+      </div>
+
+  <div class="section">
+    <h2>Ongoing Research</h2>
+
+    <div class="card">
+      <img src="microvascular-adaptation.png" alt="Simulating Microvascular Adaptation" />
+      <div class="card-content">
+        <h3>Simulating Microvascular Adaptation</h3>
+        <p>This project involves developing computational models to simulate how microvascular networks adapt to physiological and pathological conditions. The goal is to understand the regulatory mechanisms involved in microvascular growth and remodeling in response to stimuli such as blood flow and pressure.</p>
+      
+        <div class="repo-section">
+          <h4>Associated Repositories:</h4>
+          <a href="https://github.com/ncdorn/svZeroDTrees" class="button" target="_blank">svZeroDTrees</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="validation.png" alt="Validation of Microvascular Model" />
+      <div class="card-content">
+        <h3>Validation of Microvascular Adaptation Model in ToF and Alagille Patients</h3>
+        <p>In collaboration with clinical teams, this project focuses on validating the developed microvascular adaptation model in patients with Tetralogy of Fallot (ToF) and Alagille syndrome. The study involves comparing simulation results with patient-specific data to assess the accuracy and predictive capacity of the model.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="closedloop.png" alt="Multi-Fidelity Closed Loop Model" />
+      <div class="card-content">
+        <h3>Building a Multi-Fidelity Closed Loop Model of the Pulmonary Arteries</h3>
+        <p>This research aims to create a multi-fidelity closed loop model of the pulmonary arteries that integrates both high-fidelity local models and lower-fidelity global models. The model will be used to study blood flow dynamics and arterial pressure regulation in different pathological scenarios.</p>
+      </div>
+    </div>
+
+    <div class="card" style="background-color: #e8f3fa;">
+        <img src="svzerodsolver.png" alt="Open Source Solver for Cardiovascular Flow" />
+        <div class="card-content">
+          <h3>Open Source Software Development</h3>
+          <p>I contribute to the development of <a href="https://github.com/SimVascular/svZeroDSolver" target="_blank">svZeroDSolver</a>, an open-source solver for reduced-order models of cardiovascular blood flow. This tool enables efficient simulation of complex hemodynamic systems using 0D lumped parameter networks, and is a core component of the <a href="https://simvascular.github.io/" target="_blank">SimVascular</a> platform for cardiovascular biomechanics research.</p>
+        </div>
+      </div>
+  </div>
+
+  
+
+  <div class="section">
+    <h2>Publications</h2>
+    <p style="text-align: center;">Find Nicholas Dorn’s research publications and contributions on Google Scholar:</p>
+    <div style="text-align: center;">
+      <a href="https://scholar.google.com/citations?authuser=1&user=zKNZbV8AAAAJ" class="button">View Google Scholar Profile</a>
+    </div>
+  </div>
+
+</body>
+</html>

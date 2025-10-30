@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en" class="no-js" data-theme="auto">
+
+<head>
+  <meta charset="utf-8">
+  <meta http="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
+  <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace }}">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="icon" href="{{ '/assets/svg/icons.svg#lung' | relative_url }}">
+  {% seo %}
+  <meta property="og:image" content="{{ '/assets/img/og-default.png' | relative_url }}">
+
+  <link rel="stylesheet" href="{{ '/assets/css/base.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/theme.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/print.css' | relative_url }}" media="print">
+
+  {% include head.html %}
+</head>
+<body>
+  {% include skip-link.html %}
+  {% include header.html %}
+
+  <main id="main" tabindex="-1">
+    {{ content }}
+  </main>
+
+  {% include footer.html %}
+
+  <script>document.documentElement.classList.remove('no-js');</script>
+  <script src="{{ '/assets/js/site.js' | relative_url }}" defer></script>
+  <script src="{{ '/assets/js/search.js' | relative_url }}" defer></script>
+</body>
+</html>

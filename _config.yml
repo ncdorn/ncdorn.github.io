@@ -1,0 +1,61 @@
+# _config.yml
+title: "Nick Dorn — Computational Cardiovascular Biomechanics"
+description: "PhD Candidate at Stanford. Computational hemodynamics, pulmonary circulation modeling, microvascular adaptation."
+url: "https://ncdorn.github.io"          # set in README steps (e.g., https://nickdorn.github.io)
+baseurl: ""      # set in README steps (e.g., /nickdorn)
+permalink: /:categories/:year/:month/:day/:title/
+timezone: America/Los_Angeles
+theme: null
+
+# GitHub Pages allow-listed plugins
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Build options
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  hard_wrap: false
+
+collections:
+  posts:
+    output: true
+
+feed:
+  path: feed.xml
+
+sass:
+  style: compressed
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: page
+  - scope:
+      path: "index.html"
+    values:
+      layout: home
+  - scope:
+      path: "pages"
+    values:
+      layout: page
+
+# Site metadata used in JSON-LD and footer
+nick:
+  name: "Nicholas Dorn"
+  preferred_name: "Nick"
+  title: "PhD Candidate, Chemical Engineering, Stanford University"
+  focus: "Computational cardiovascular biomechanics; pulmonary circulation modeling; microvascular adaptation"
+  email_public: "ndorn@stanford.edu"
+  affiliations:
+    - "Cardiovascular Biomechanics Computation Lab, Stanford University"
+  social:
+    github: "https://github.com/ncdorn"
+    scholar: "https://scholar.google.com/citations?authuser=1&user=zKNZbV8AAAAJ"
+    linkedin: "https://www.linkedin.com/in/ndorn22/"
+    x: "https://x.com/your-handle"
+    bsky: "https://bsky.app/profile/your-handle"

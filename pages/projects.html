@@ -1,0 +1,25 @@
+---
+title: "Projects & Software"
+permalink: /pages/projects.html
+---
+<!-- pages/projects.html -->
+
+<div class="filter-row">
+  <span class="filter-label">Tags:</span>
+  <div class="filter-buttons" data-filter-type="tags" data-target=".project" data-multi="true">
+    <button class="filter-btn" data-filter-value="all" aria-pressed="true">All</button>
+    {% assign all_tags = site.data.projects | map: 'tags' | join: ',' | split: ',' | uniq | sort %}
+    {% for t in all_tags %}
+      {% if t and t != '' %}
+      <button class="filter-btn" data-filter-value="{{ t | downcase }}">{{ t }}</button>
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
+
+<section class="cards" id="project-list">
+  {% assign projects = site.data.projects | sort: "order" %}
+  {% for project in projects %}
+    {% include card-project.html project=project %}
+  {% endfor %}
+</section>
