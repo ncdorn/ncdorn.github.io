@@ -1,20 +1,18 @@
 # _data/projects.yml
 - name: "svZeroDTrees"
   summary: "Fast structured-tree generator and simulator for microvascular impedance and waveform synthesis."
-  tech: ["Python", "NumPy", "C++ bindings"]
-  repo: "https://github.com/your-github/svZeroDTrees"
-  docs: "https://your-github.github.io/svZeroDTrees"
-  demo: ""
+  tech: ["Python", "Pandas", "VTK"]
+  repo: "https://github.com/ncdorn/svZeroDTrees"
+  docs: "https://ncdorn.github.io/svZeroDTrees"
   tags: ["structured-tree", "pulmonary", "hemodynamics"]
   featured: true
   order: 1
 
 - name: "svZeroDSolver"
-  summary: "0D/1D lumped-parameter network solver with RCR, closed-loop, and custom boundary conditions."
-  tech: ["C++", "Python", "Jekyll docs"]
-  repo: "https://github.com/your-github/svZeroDSolver"
+  summary: "svZeroDSolver is a fast simulation tool for modeling the hemodynamics of vascular networks using zero-dimensional (0D) lumped parameter models."
+  tech: ["C++", "Python", "Doxygen"]
+  repo: "https://github.com/SimVascular/svZeroDSolver"
   docs: ""
-  demo: ""
   tags: ["LPN", "solver"]
   featured: true
   order: 2
@@ -22,9 +20,8 @@
 - name: "PacerBrain (iOS)"
   summary: "Race-day pacing & fueling strategies for endurance athletes."
   tech: ["SwiftUI", "CoreData"]
-  repo: "https://github.com/your-github/pacerbrain"
+  repo: "https://github.com/ncdorn/PacerBrain"
   docs: ""
-  demo: ""
   tags: ["iOS", "triathlon"]
   featured: false
   order: 3

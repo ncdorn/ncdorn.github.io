@@ -5,10 +5,7 @@ layout: base
 
 <section class="hero" aria-label="Intro">
   <div class="hero-visual">
-    <svg class="hero-svg" role="img" aria-label="Animated pulmonary tree" viewBox="0 0 900 600" preserveAspectRatio="xMidYMid meet">
-      <title>Pulsatile pulmonary tree</title>
-      <use href="{{ '/assets/svg/pulmonary-hero.svg#tree' | relative_url }}"></use>
-    </svg>
+    <img class="hero-svg" src="{{ '/assets/img/cassian-pas-full.png' | relative_url }}" alt="" role="presentation">
     <div class="hero-bg" aria-hidden="true">
       <svg>
         <use href="{{ '/assets/svg/pulmonary-bg.svg#cap-mesh' | relative_url }}"></use>
@@ -38,20 +35,22 @@ layout: base
       </picture>
     </figure>
 
-    <div class="hero-text">
+    <div class="hero-text glass-panel hero-card">
       <h1 class="display">Hi, I’m <strong>{{ site.nick.preferred_name }}</strong>.</h1>
-      <p class="lead">I model <em>pulmonary circulation</em> and <em>microvascular adaptation</em> to improve patient-specific hemodynamics.</p>
+      <p class="lead">I model <em>pulmonary hemodynamics</em> and <em>microvascular adaptation</em> to improve surgical planning for children with congenital heart defects. 
+                                  I am currently a PhD candidate in the Cardiovascular Biomechanics Computation Lab at Stanford University. 
       <div class="cta-row">
-        <a class="btn btn-primary" href="{{ '/pages/projects.html' | relative_url }}">Projects</a>
-        <a class="btn btn-subtle" href="{{ '/pages/publications.html' | relative_url }}">Publications</a>
-        <a class="btn btn-link" href="{{ site.nick.social.github }}" target="_blank" rel="noopener">GitHub ↗</a>
+        <a class="btn btn-primary" href="{{ site.nick.social.github }}" target="_blank" rel="noopener">GitHub ↗</a>
+        <a class="btn btn-subtle" href="{{ site.nick.social.scholar }}" target="_blank" rel="noopener">Google Scholar ↗</a>
+        <a class="btn btn-link" href="{{ site.nick.social.linkedin }}" target="_blank" rel="noopener">LinkedIn ↗</a>
+        <a class="btn btn-link" href="mailto:ndorn@stanford.edu">Email ↗</a>
       </div>
     </div>
   </div>
 </section>
 
 <section class="container grid gap-xl">
-  <div>
+  <div class="glass-panel glass-section">
     <h2 class="h3 with-icon"><svg class="icon"><use href="{{ '/assets/svg/icons.svg#star' | relative_url }}"/></svg> Featured</h2>
     <div class="cards">
       {% assign featured = site.data.projects | where: "featured", true | sort: "order" %}
@@ -61,7 +60,7 @@ layout: base
     </div>
   </div>
 
-  <div>
+  <div class="glass-panel glass-section">
     <h2 class="h3 with-icon"><svg class="icon"><use href="{{ '/assets/svg/icons.svg#news' | relative_url }}"/></svg> News</h2>
     <ul class="news-list">
       {% for post in site.posts limit:3 %}

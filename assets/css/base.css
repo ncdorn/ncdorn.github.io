@@ -80,11 +80,12 @@ a:hover{color:var(--accent-2)}
   align-items:center;
   justify-content:center;
   gap:.4rem;
-  padding:.62rem 1.05rem;
+  padding:.44rem .85rem;
   border-radius:999px;
   border:1px solid var(--btn-border-color);
   text-decoration:none;
   font-weight:500;
+  font-size:.95rem;
   color:var(--text-0);
   background:color-mix(in oklab, var(--bg-0) 45%, transparent);
   backdrop-filter:blur(18px) saturate(140%);
@@ -106,7 +107,7 @@ a:hover{color:var(--accent-2)}
   background:linear-gradient(100deg, var(--deoxy-blue), var(--capillary-purple), var(--oxy-red));
   box-shadow:0 20px 40px color-mix(in srgb, var(--deoxy-blue) 32%, transparent);
 }
-.btn-link{padding:.62rem 1rem}
+.btn-link{padding:.44rem .85rem}
 .btn:focus-visible{outline:2px solid color-mix(in oklab, var(--accent-1) 60%, var(--accent-2) 40%);outline-offset:3px}
 
 /* Badges & cards */
@@ -122,6 +123,29 @@ a:hover{color:var(--accent-2)}
   box-shadow:var(--glass-shadow);
   transition:transform .2s ease, box-shadow .2s ease, outline-color .2s
 }
+
+.card.talk{position:relative;padding-right:2.75rem}
+.card.talk .talk-card-icon{
+  position:absolute;
+  top:.85rem;
+  right:.85rem;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:2.6rem;
+  height:2.6rem;
+  border-radius:50%;
+  background:color-mix(in oklab, var(--bg-0) 35%, transparent);
+  backdrop-filter:blur(12px) saturate(150%);
+  -webkit-backdrop-filter:blur(12px) saturate(150%);
+  border:1px solid var(--glass-border-color);
+  box-shadow:0 10px 24px color-mix(in srgb, black 12%, transparent);
+  color:color-mix(in oklab, var(--accent-1) 55%, var(--capillary-purple) 45%);
+}
+.card.talk .talk-card-icon[data-type="poster"]{
+  color:color-mix(in oklab, var(--deoxy-blue) 60%, var(--capillary-purple) 40%);
+}
+.card.talk .talk-card-icon svg{width:1.15rem;height:1.15rem}
 
 .glass-panel{
   background:var(--glass-bg);
@@ -300,4 +324,61 @@ a:hover{color:var(--accent-2)}
 
 /* Resume/CV minor tweaks */
 .resume,.cv{font-size:.95rem}
+.resume{
+  display:grid;
+  gap:clamp(1.5rem, 3vw, 2.5rem);
+}
+.resume-header{
+  display:flex;
+  flex-direction:column;
+  gap:.75rem;
+}
+.resume-header h2{margin:0;font-size:1.9rem}
+.resume-tagline{margin:0;color:var(--text-1);font-weight:500}
+.resume-contact{
+  display:flex;
+  flex-wrap:wrap;
+  gap:.35rem .9rem;
+  padding:0;
+  margin:0;
+  color:var(--text-1);
+  font-size:.92rem;
+}
+.resume-contact a{text-decoration:none;color:inherit}
+.resume-section{
+  display:grid;
+  gap:.75rem;
+}
+.resume-section h3{margin:0;color:var(--text-0);font-size:1.1rem}
+.resume-item{
+  display:grid;
+  gap:.5rem;
+}
+.resume-item header{
+  display:flex;
+  flex-direction:column;
+  gap:.35rem;
+}
+.resume-item h4{margin:0;font-size:1rem}
+.resume-meta{
+  display:flex;
+  flex-wrap:wrap;
+  gap:.75rem;
+  font-size:.9rem;
+  color:var(--text-1);
+}
+.resume-item ul{
+  margin:0;
+  padding-left:1.15rem;
+  display:grid;
+  gap:.4rem;
+}
+.resume-skills,
+.resume-list{
+  margin:0;
+  padding-left:1.1rem;
+  display:grid;
+  gap:.35rem;
+}
+.resume-skills li strong{font-weight:600}
 .cols{columns:2}

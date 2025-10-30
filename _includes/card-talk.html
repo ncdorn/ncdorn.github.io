@@ -1,6 +1,16 @@
-<!-- _includes/card-talk.html -->
+{% assign talk_type = include.talk.type | default: 'Talk' | strip %}
+{% assign talk_slug = talk_type | downcase %}
+{% if talk_slug == 'poster' %}
+  {% assign talk_icon = 'poster' %}
+{% else %}
+  {% assign talk_icon = 'talk' %}
+{% endif %}
 <article class="card talk">
+  <span class="talk-card-icon" data-type="{{ talk_slug }}" aria-hidden="true">
+    <svg aria-hidden="true"><use href="{{ '/assets/svg/icons.svg' | relative_url }}#{{ talk_icon }}"></use></svg>
+  </span>
   <h3 class="h5 mt-0">{{ include.talk.title }}</h3>
+  <p class="authors">{{ include.talk.authors }}</p>
   <p class="venue">{{ include.talk.event }} · <time datetime="{{ include.talk.date }}">{{ include.talk.date }}</time> — {{ include.talk.location }}</p>
   <p class="links">
     {% if include.talk.slides %}<a href="{{ include.talk.slides }}" target="_blank" rel="noopener">Slides</a>{% endif %}

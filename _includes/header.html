@@ -1,4 +1,3 @@
-<!-- _includes/header.html -->
 <header class="site-header">
   <nav class="nav container" aria-label="Primary">
     <a class="brand" href="{{ '/' | relative_url }}">
@@ -7,13 +6,12 @@
     </a>
     <button class="nav-toggle" aria-expanded="false" aria-controls="nav-list"><span class="sr-only">Menu</span></button>
     <ul id="nav-list" class="nav-list">
-      <li><a class="{% if page.url == '/pages/research.html' %}active{% endif %}" href="{{ '/pages/research.html' | relative_url }}">Research</a></li>
-      <li><a class="{% if page.url == '/pages/projects.html' %}active{% endif %}" href="{{ '/pages/projects.html' | relative_url }}">Projects</a></li>
-      <li><a class="{% if page.url == '/pages/publications.html' %}active{% endif %}" href="{{ '/pages/publications.html' | relative_url }}">Publications</a></li>
-      <li><a class="{% if page.url == '/pages/talks.html' %}active{% endif %}" href="{{ '/pages/talks.html' | relative_url }}">Talks & Posters</a></li>
-      <li><a class="{% if page.url == '/pages/resume.html' %}active{% endif %}" href="{{ '/pages/resume.html' | relative_url }}">Resume</a></li>
-      <li><a class="{% if page.url == '/pages/cv.html' %}active{% endif %}" href="{{ '/pages/cv.html' | relative_url }}">CV</a></li>
-      <li><a class="{% if page.url == '/pages/contact.html' %}active{% endif %}" href="{{ '/pages/contact.html' | relative_url }}">Contact</a></li>
+      <li><a class="nav-link{% if page.url == '/pages/research.html' %} is-active{% endif %}" {% if page.url == '/pages/research.html' %}aria-current="page"{% endif %} href="{{ '/pages/research.html' | relative_url }}">Research</a></li>
+      <li><a class="nav-link{% if page.url == '/pages/projects.html' %} is-active{% endif %}" {% if page.url == '/pages/projects.html' %}aria-current="page"{% endif %} href="{{ '/pages/projects.html' | relative_url }}">Projects</a></li>
+      <li><a class="nav-link{% if page.url == '/pages/publications.html' %} is-active{% endif %}" {% if page.url == '/pages/publications.html' %}aria-current="page"{% endif %} href="{{ '/pages/publications.html' | relative_url }}">Publications</a></li>
+      <li><a class="nav-link{% if page.url == '/pages/talks.html' %} is-active{% endif %}" {% if page.url == '/pages/talks.html' %}aria-current="page"{% endif %} href="{{ '/pages/talks.html' | relative_url }}">Talks & Posters</a></li>
+      <li><a class="nav-link{% if page.url == '/pages/resume.html' %} is-active{% endif %}" {% if page.url == '/pages/resume.html' %}aria-current="page"{% endif %} href="{{ '/pages/resume.html' | relative_url }}">Resume</a></li>
+      <li><a class="nav-link{% if page.url == '/pages/cv.html' %} is-active{% endif %}" {% if page.url == '/pages/cv.html' %}aria-current="page"{% endif %} href="{{ '/pages/cv.html' | relative_url }}">CV</a></li>
       <li class="nav-divider" aria-hidden="true"></li>
       <li class="toggles">
         <button id="toggle-theme" class="btn-ghost" aria-pressed="false" title="Toggle dark mode">🌓</button>

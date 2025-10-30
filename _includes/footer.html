@@ -1,18 +1,15 @@
-<!-- _includes/footer.html -->
 <footer class="site-footer">
-  <div class="container footer-grid">
+  <div class="container footer-grid glass-panel">
     <div>
       <h2 class="h5 mt-0">Contact</h2>
       <p>
-        <span id="email" data-user="nick" data-domain="example.com"></span><br>
+        <span id="email" data-user="ndorn" data-domain="stanford.edu"></span><br>
         {{ site.nick.affiliations | join: ", " }}
       </p>
       <p class="social">
         <a href="{{ site.nick.social.github }}">GitHub</a> ·
         <a href="{{ site.nick.social.scholar }}">Scholar</a> ·
-        <a href="{{ site.nick.social.linkedin }}">LinkedIn</a> ·
-        <a href="{{ site.nick.social.x }}">X</a> ·
-        <a href="{{ site.nick.social.bsky }}">Bluesky</a>
+        <a href="{{ site.nick.social.linkedin }}">LinkedIn</a>
       </p>
     </div>
     <div>
@@ -27,7 +24,7 @@
     </div>
     <div>
       <h2 class="h5 mt-0">Meta</h2>
-      <p>© {{ "now" | date: "%Y" }} {{ site.nick.preferred_name }} Dorn. MIT License.</p>
+      <p>© {{ "now" | date: "%Y" }} {{ site.nick.preferred_name }} Dorn.</p>
       <p><a href="{{ '/feed.xml' | relative_url }}">RSS</a> · <a href="{{ '/sitemap.xml' | relative_url }}">Sitemap</a></p>
     </div>
   </div>
